@@ -122,6 +122,8 @@ public class Photo extends DataObject {
 	 */
 	protected String ending = "jpg";
 	
+	// Refactoring for week 4. Not needed: protected Coordinate location;
+	
 	/**
 	 *
 	 */
@@ -418,4 +420,16 @@ public class Photo extends DataObject {
 		noVotesAtLastNotification = noVotes;
 		incWriteCount();
 	}
+	/**
+	 * Coordinate set and get methods not needed. Refactoring for week 4.
+	 * @methodtype get
+	 
+	public Coordinate getLocation() {
+		return location;
+	}
+	public void setLocation(Coordinate location) {
+		this.location = location;
+	}
+	*/
+
 }

@@ -33,7 +33,7 @@ public class Coordinate implements Serializable{
 		return 0;
 	}
 	
-	public double getLatitudinalDisatnce(Coordinate otherLocation){
+	public double getLatitudinalDistance(Coordinate otherLocation){
 //		this.latitude
 //		this.longitude
 //		otherLocation.getLatitude()
@@ -42,7 +42,7 @@ public class Coordinate implements Serializable{
 		return 0;
 	}
 	
-	public double getLongitudinalDisatnce(Coordinate otherLocation){
+	public double getLongitudinalDistance(Coordinate otherLocation){
 		
 //		this.latitude
 //		this.longitude
