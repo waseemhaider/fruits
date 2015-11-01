@@ -34,7 +34,7 @@ public class Coordinate implements Serializable{
 	}
 	
 	public double getLatitudinalDistance(Coordinate otherLocation){
-//		this.latitude
+//		Empty. Must be added later. this.latitude
 //		this.longitude
 //		otherLocation.getLatitude()
 //		otherLocation.longitude()

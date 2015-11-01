@@ -6,7 +6,10 @@ import java.io.Serializable;
 public class Location implements Serializable {
 
 	
-	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6971967339760506918L;
 	protected Coordinate shotAtXY;
 	protected String  shotAtPlace;
 	
