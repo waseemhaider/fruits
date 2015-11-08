@@ -1,21 +1,67 @@
 package org.wahlzeit.model;
 
-import java.io.Serializable;
+import com.googlecode.objectify.annotation.Entity;
 
-/*Creating  domain photo class FruitFoto
- */
-public class FruitPhoto extends Photo implements Serializable {
+@Entity
+public class FruitPhoto extends Photo {
 	
-	private static final long serialVersionUID = -4156006420561533191L;
-	protected Location fruitFotoLocation;
-
+	private String name;
+	private Location origin;
+	
+	/**
+	 * @methodtype constructor
+	 */
 	public FruitPhoto() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
+	/**
+	 * @methodtype constructor
+	 */
 	public FruitPhoto(PhotoId myId) {
 		super(myId);
-		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @methodtype get
+	 * @return origin
+	 */
+	public Location getOrigin() {
+		return origin;
+	}
+
+	/**
+	 * @methodtype set
+	 * @param origin to set
+	 * @throws IllegalArgumentException
+	 */
+	public void setOrigin(Location origin) throws IllegalArgumentException {
+		if (origin == null) {
+			throw new IllegalArgumentException("Origin must be a place or country with approximate coordinates");
+		}
+		this.origin= origin;
+	}
+
+	/**
+	 * @methodtype get
+	 * @return name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @methodtype set
+	 * @param name to set
+	 * @throws IllegalArgumentException
+	 */
+	public void setName(String name) throws IllegalArgumentException {
+		if (name== null) {
+			throw new IllegalArgumentException("name cannot be null");
+		}
+		this.name = name;
+	}
+
+
 }
+

@@ -1,35 +1,62 @@
 package org.wahlzeit.model;
 
-import java.io.Serializable;
-/* A class to model FruitFoto Location
- */
-public class Location implements Serializable {
+public class Location {
+	private Coordinate coordinate;
+	private String name;
 
+	/**
+	 * @methodtype constructor
+	 * @param name the name to set
+	 * @throws IllegalArgumentException
+	 */
+	public Location(String name) throws IllegalArgumentException {
+		if (name == null) {
+			throw new IllegalArgumentException("name cannot be null or empty");
+		}
+		
+		this.name = name;
+	}
 	
 	/**
-	 * 
+	 * @methodtype constructor
+	 * @param name the name to set
+	 * @param coordinate the coordinate to set
+	 * @throws IllegalArgumentException
 	 */
-	private static final long serialVersionUID = -6971967339760506918L;
-	protected Coordinate shotAtXY;
-	protected String  shotAtPlace;
-	
-	
-	public Location(Coordinate shotAtXY, String shotAtPlace) {
+	public Location(String name, Coordinate coordinate) throws IllegalArgumentException {
+		this(name);
 		
-		this.shotAtXY = shotAtXY;
-		this.shotAtPlace = shotAtPlace;
+		if (coordinate == null) {
+			throw new IllegalArgumentException("coordinate cannot be null");
+		}
+		this.coordinate = coordinate;
 	}
-	public Coordinate getShotAtXY() {
-		return shotAtXY;
+	
+	/**
+	 * @methodtype get
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
 	}
-	public void setShotAtXY(Coordinate shotAtXY) {
-		this.shotAtXY = shotAtXY;
+		
+	/**
+	 * @methodtype get
+	 * @return the coordinate
+	 */
+	public Coordinate getCoordinate() {
+		return coordinate;
 	}
-	public String getShotAtPlace() {
-		return shotAtPlace;
-	}
-	public void setShotAtPlace(String shotAtPlace) {
-		this.shotAtPlace = shotAtPlace;
-	}
-
+	
+	/**
+	 * @methodtype set
+	 * @param coordinate the coordinate to set
+	 * @throws IllegalArgumentException
+	 */
+	public void setCoordinate(Coordinate coordinate) {
+		if (coordinate == null) {
+			throw new IllegalArgumentException("coordinate cannot be null");
+		}
+		this.coordinate = coordinate;
+	}	
 }

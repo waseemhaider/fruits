@@ -69,6 +69,8 @@ public class Photo extends DataObject {
 
 	protected PhotoId id = null;
 	
+	protected Location location = null;
+	
 	/**
 	 *
 	 */
@@ -121,8 +123,6 @@ public class Photo extends DataObject {
 	 * The default type is jpg
 	 */
 	protected String ending = "jpg";
-	
-	// Refactoring for week 4. Not needed: protected Coordinate location;
 	
 	/**
 	 *
@@ -420,16 +420,23 @@ public class Photo extends DataObject {
 		noVotesAtLastNotification = noVotes;
 		incWriteCount();
 	}
+
 	/**
-	 * Coordinate set and get methods not needed. Refactoring for week 4.
+	 * Get location of photo
+	 * @return Returns location of photo  
 	 * @methodtype get
-	 
-	public Coordinate getLocation() {
+	 */
+	public Location getLocation() {
 		return location;
 	}
-	public void setLocation(Coordinate location) {
-		this.location = location;
-	}
-	*/
 
+	/**
+	 * Set location of photo
+	 * @param location Coordinate
+	 * @methodtype set
+	 */
+	public void setLocation(Location location) {
+		this.location = location;
+		incWriteCount();
+	}
 }
